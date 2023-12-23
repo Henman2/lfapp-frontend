@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../app/assets/Images/logo.png';
 import {
     Collapse,
     Navbar,
@@ -13,8 +14,8 @@ const Header = ()=>{
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     return(
-        <Navbar className='App-header' expand='md' container>
-            <NavbarBrand className='ms-5' href="/">Lost and Found App</NavbarBrand>
+        <Navbar className='App-header justify-content-center' dark expand='md' container>
+            <NavbarBrand className='me-5' href="/"><img src={logo} style={{height:40, width:40}} alt='logo'/>Lost and Found App</NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="me-auto" navbar>
