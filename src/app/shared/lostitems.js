@@ -1,5 +1,5 @@
 import wallet from '../assets/Images/wallet.jpg';
-import laptop from '../assets/Images/laptop.jpg';
+import laptop from '../assets/Images/laptop.jpeg';
 import watch from '../assets/Images/watch.jpg';
 import waterbottle from '../assets/Images/waterbottle.jpg';
 import umbrella from '../assets/Images/umbrella.jpg';
@@ -9,7 +9,7 @@ import phone from '../assets/Images/phone.jpg';
 import glasses from '../assets/Images/glasses.jpg';
 import keys from '../assets/Images/keys.jpg';
 
-const lostItems = [
+export const lostItems = [
     { id: 0, name: "Key", image: keys, description: "Lost house key" },
     { id: 1, name: "Wallet", image: wallet, description: "Brown leather wallet" },
     { id: 2, name: "Phone", image: phone, description: "Black smartphone" },
