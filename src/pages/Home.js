@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div>
       <SearchBox searchText={handleInputChange} />
-      <Container className="App-container">
+      <Container className="listItem-container">
       <LostItemsList lostitems={filteredSearch} />
     </Container>
 
