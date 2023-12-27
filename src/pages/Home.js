@@ -1,26 +1,15 @@
+import React, { useState } from 'react';
 import { Container } from "reactstrap";
-import { useState } from "react";
-import LostItemsList from "../features/lostsitems/LostItemsList";
 import SearchBox from "../components/SearchBox";
-import { lostItems } from "../app/shared/lostitems";
+import Directory from "./Directory";
 
 const Home = () => {
-  const [state, setState] = useState({lostitems: lostItems, searchFieldValue: ''});
-  const handleInputChange = (event)=>{
-    setState({...state, searchFieldValue: event.target.value});
-  };
-  const filteredSearch = state.lostitems.filter((lostItem)=>{
-    return lostItem.name.toLowerCase().includes(state.searchFieldValue.toLowerCase())
-  })
+  const [searchValue, setSearchValue] = useState('');
+  
   return (
-    <div>
-      <SearchBox searchText={handleInputChange} />
-      <Container className="listItem-container">
-      <LostItemsList lostitems={filteredSearch} />
+    <Container>
+      {/* <SearchBox searchText={handleInputChange} /> */}
     </Container>
-
-    </div>
-    
   );
 };
 
